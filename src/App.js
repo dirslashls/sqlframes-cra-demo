@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import SQLFramesApp from './SQLFramesApp';
 
 function App() {
   return (
@@ -17,7 +18,15 @@ function App() {
         >
           Learn React
         </a>
+        <a
+          className="App-link"
+          href="https://sqlframes.com"
+          target="_blank"
+        >
+          Learn SQL Frames
+        </a>
       </header>
+      <SQLFramesApp/>
     </div>
   );
 }

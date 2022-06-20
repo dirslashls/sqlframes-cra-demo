@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -25,6 +25,15 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <link rel="stylesheet" data-theme='light' type="text/css" href="https://unpkg.com/@sqlframes/repl-app@latest/dist/styles/themes/light.css"/>
+    <link rel="stylesheet" data-theme='dark' disabled type="text/css" href="https://unpkg.com/@sqlframes/repl-app@latest/dist/styles/themes/dark.css"/>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@sqlframes/repl-app@latest/dist/index.css"/>
+    <style>
+      .stdin-content { /* to set the default for repl input */
+        min-height: 150px;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.js" integrity="sha256-lIXwkX+X/PT2Ol6jZSAP/VfxI/RROCovmhrS4v1RrJs=" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
