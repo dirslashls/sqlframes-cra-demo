@@ -1,5 +1,5 @@
-import { useContext, useState } from "react";
-import { SQLFramesComponent } from "./SQLFramesComponent";
+import React, { useContext, useState } from "react";
+import SQLFramesComponent from "./SQLFramesComponent";
 import SQLFramesContext from "./SQLFramesContext";
 
 export default function SQLFramesApp() {
@@ -7,7 +7,7 @@ export default function SQLFramesApp() {
 	// @ts-ignore
 	const { DataFrame, SQL } = sf.sqlframes;
 	const { groupBy, agg: { min, max } } = SQL;
-	let [df,setDF] = useState(DataFrame.fromURL('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.csv'));
+	const [df] = useState(DataFrame.fromURL('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.csv'));
 	const gdf = df.gdf(groupBy('type'),min('mag').as('min'),max('mag').as('max'));
 	const chart = gdf.chart.bar('type',['min','max']);
 	chart.title = 'Latest earthquake stats';

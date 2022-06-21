@@ -3,7 +3,7 @@ import SQLFramesContext from './SQLFramesContext';
 // Destructuring assignment of the exported namespaces 
 // All the top level classes and objects exported in the namespaces
 
-const SQLFramesComponent = function({ value }) {
+function SQLFramesComponent({ value }) {
 	const ref = useRef(null);
 	const sf = useContext(SQLFramesContext);
 
@@ -18,4 +18,4 @@ const SQLFramesComponent = function({ value }) {
 	)
 }
 
-export { SQLFramesComponent };
+export default SQLFramesComponent;

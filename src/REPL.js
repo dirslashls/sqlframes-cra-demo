@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { SQLFramesComponent } from "./SQLFramesComponent";
+import SQLFramesComponent from "./SQLFramesComponent";
 import SQLFramesContext from './SQLFramesContext';
 
 class REPL extends Component {
