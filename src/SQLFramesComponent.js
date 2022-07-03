@@ -11,6 +11,7 @@ function SQLFramesComponent({ value }) {
 		// @ts-ignore
 		const { View } = sf.sqlframes;
 		View.render(ref.current,value);
+		return () => { View.render(ref.current,null); };
 	});
 
 	return (
