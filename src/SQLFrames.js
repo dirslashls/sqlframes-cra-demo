@@ -4,7 +4,7 @@ import SQLFramesContext from './SQLFramesContext';
 
 const init = async () => {
 	// @ts-ignore
-	window.sqlframes_license = {"data":{"domain":"localhost","expiry_date":"2022/06/30"},"signature":"s58mjEprrsoTIVbdb/06uHd4K/CPWYEandH/53NAaKMxAKulF4d7dIgbm4E/ictms6cQ+FiCsrh1vU8wVexn0w=="};
+	window.sqlframes_license = {"data":{"domain":"localhost","expiry_date":"2022/09/30"},"signature":"CC1gnQL48/Vlt/RoPYTfKA5KSA191foKpl5mlYLHtj53kpZTIj6pnr4+KYiRmuetkx12HWHNzcBMLsvmt8dv6A=="};
 	const { default: sfloader } = 
 		// @ts-ignore
 		await import('https://unpkg.com/@sqlframes/repl-app@latest/dist/main.mjs');
