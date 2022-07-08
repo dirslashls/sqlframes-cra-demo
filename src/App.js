@@ -22,6 +22,7 @@ function App() {
           className="App-link"
           href="https://sqlframes.com"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Learn SQL Frames
         </a>

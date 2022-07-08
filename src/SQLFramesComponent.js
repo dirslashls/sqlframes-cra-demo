@@ -4,15 +4,15 @@ import SQLFramesContext from './SQLFramesContext';
 function SQLFramesComponent({ value }) {
 	const ref = useRef(null);
 	const sf = useContext(SQLFramesContext);
-
+	// @ts-ignore
+	const sqlframes = sf.sqlframes;
 	useEffect(() => {
 		const e = ref.current;
 		if(!e) return;
-		// @ts-ignore
-		const { View } = sf.sqlframes;
+		const { View } = sqlframes;
 		View.render(e,value);
 		return () => { View.render(e,null); };
-	},[value]);
+	},[sqlframes,value]);
 
 	return (
 		<div className="sf" ref={ref}></div>
