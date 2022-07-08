@@ -1,7 +1,5 @@
 import React, { useRef, useEffect, useContext } from 'react';
 import SQLFramesContext from './SQLFramesContext';
-// Destructuring assignment of the exported namespaces 
-// All the top level classes and objects exported in the namespaces
 
 function SQLFramesComponent({ value }) {
 	const ref = useRef(null);
@@ -14,7 +12,7 @@ function SQLFramesComponent({ value }) {
 		const { View } = sf.sqlframes;
 		View.render(e,value);
 		return () => { View.render(e,null); };
-	});
+	},[value]);
 
 	return (
 		<div className="sf" ref={ref}></div>
