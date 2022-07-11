@@ -8,7 +8,7 @@ function SQLFramesComponent({ value }) {
 	const sqlframes = sf.sqlframes;
 	useEffect(() => {
 		const e = ref.current;
-		if(!e) return;
+		if(!e) return void 0;
 		const { View } = sqlframes;
 		View.render(e,value);
 		return () => { View.render(e,null); };
