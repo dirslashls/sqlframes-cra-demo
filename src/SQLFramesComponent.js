@@ -6,13 +6,13 @@ function SQLFramesComponent({ value }) {
 	const sf = useContext(SQLFramesContext);
 	// @ts-ignore
 	const sqlframes = sf.sqlframes;
+	const { View } = sqlframes;
 	useEffect(() => {
 		const e = ref.current;
 		if(!e) return void 0;
-		const { View } = sqlframes;
 		View.render(e,value);
 		return () => { View.render(e,null); };
-	},[sqlframes,value]);
+	},[value]);
 
 	return (
 		<div className="sf" ref={ref}></div>
