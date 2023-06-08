@@ -8,11 +8,13 @@ function SQLFramesComponent({ value }) {
 	const sqlframes = sf.sqlframes;
 	const { View } = sqlframes;
 	useEffect(() => {
-		const e = ref.current;
-		if(!e) return void 0;
-		View.render(e,value);
-		return () => { View.render(e,null); };
+		if(ref.current) View.render(ref.current,value);
 	},[value]);
+
+	useEffect(() => {
+		const e = ref.current;
+		return () => { View.render(e,null); };
+	},[]);
 
 	return (
 		<div className="sf" ref={ref}></div>
