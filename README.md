@@ -13,6 +13,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Key Modifications
 
 1. [src/App.js](src/App.js) - added SQLFramesApp into this main app
-1. [src/index.html](src/index.html) - style sheets and requirejs. Also data-theme for dark (light) mode.
+1. [public/index.html](public/index.html) - style sheets and requirejs. Also data-theme for dark (light) mode.
 1. [src/index.js](src/index.js) - Wrapped App component with SQLFrames to load the **SQL Frames** dependency. In addition to rendering the App it also renders **SQL Frames** REPL.
 1. [src/index.css](src/index.css) - css for making the dark mode to work.
