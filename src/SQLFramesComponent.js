@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useContext } from 'react';
+import React, { useRef, useEffect, useContext, useLayoutEffect } from 'react';
 import SQLFramesContext from './SQLFramesContext';
 
 function SQLFramesComponent({ value }) {
@@ -7,7 +7,7 @@ function SQLFramesComponent({ value }) {
 	// @ts-ignore
 	const sqlframes = sf.sqlframes;
 	const { View } = sqlframes;
-	useEffect(() => {
+	useLayoutEffect(() => {
 		if(ref.current) View.render(ref.current,value);
 	},[value]);
 
