@@ -9,11 +9,13 @@ function SQLFramesComponent({ value }) {
 	const { View } = sqlframes;
 	useLayoutEffect(() => {
 		if(ref.current) View.render(ref.current,value);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	},[value]);
 
 	useEffect(() => {
 		const e = ref.current;
 		return () => { View.render(e,null); };
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	},[]);
 
 	return (
